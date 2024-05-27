@@ -1,0 +1,49 @@
+
+        <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+          <div class="w-full h-48">
+            <img
+              class="w-full h-full object-cover"
+              [src]="recipe?.image"
+              [alt]="recipe?.name"
+            />
+          </div>
+          <div class="px-6 pt-4">
+            <div class="font-bold text-xl ">
+              <a [routerLink]="['recipes',recipe?.name]"  ariaCurrentWhenActive="page">
+                {{ recipe?.name }}
+              </a>
+            </div>
+            <!-- <p class="text-gray-700 text-base">{{ recipe?.instructions[0] }}</p> -->
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >{{ recipe?.category }}</span
+            >
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >{{ recipe?.country }}</span
+            >
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <div class="flex items-center">
+              <img
+                class="w-10 h-10 rounded-full mr-4"
+                [src]="recipe?.chef?.avatar"
+                [alt]="recipe?.chef?.name"
+              />
+              <div class="text-sm">
+                <p class="text-gray-900 leading-none">{{ recipe?.chef?.name }}</p>
+                <p class="text-gray-600">{{ recipe?.chef?.experience }}</p>
+              </div>
+            </div>
+            <div class="mt-4">
+              <span class="text-yellow-500">★</span>
+              <span class="text-yellow-500">★</span>
+              <span class="text-yellow-500">★</span>
+              <span class="text-yellow-500">★</span>
+              <span class="text-yellow-500">★</span>
+              <span class="text-gray-600 text-sm">{{ recipe?.rate }}</span>
+            </div>
+          </div>
+        </div>
