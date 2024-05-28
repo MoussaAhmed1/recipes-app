@@ -10,6 +10,8 @@ import { RecipeItemComponent } from './recipes/recipe-item/recipe-item.component
 import { HeroComponent } from './layout/hero/hero.component';
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
+import { RecipeInfoComponent } from './recipes/recipe-details/recipe-info/recipe-info.component';
+import { RecipeIngredientsComponent } from './recipes/recipe-details/recipe-ingredients/recipe-ingredients.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.co
     RecipeItemComponent,
     HeroComponent,
     RecipeDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RecipeInfoComponent,
+    RecipeIngredientsComponent
   ],
   imports: [
     BrowserModule,
