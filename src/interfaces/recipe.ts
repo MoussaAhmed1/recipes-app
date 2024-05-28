@@ -12,6 +12,7 @@ export interface Chef {
 }
 
 export interface Recipe {
+  id: string;
   ingredients: Ingredient[];
   name: string;
   image: string;

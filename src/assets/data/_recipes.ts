@@ -2,6 +2,7 @@ import { Recipe } from "../../interfaces/recipe";
 
 export const resipes:Recipe[] = [
   {
+    id:"1",
     name: "Spaghetti Carbonara",
     image: "https://th.bing.com/th/id/OIP.Y9Ggv_GmsWWjWgnvJOc1XQHaHa?w=199&h=199&c=7&r=0&o=5&pid=1.7",
     ingredients: [
@@ -38,6 +39,7 @@ export const resipes:Recipe[] = [
     country: "Italy"
   },
   {
+    id:"2",
     name: "Chicken Curry",
     image: "https://th.bing.com/th/id/OIP.ddQVTbxl9fq-ixqHDohtoAHaFs?w=226&h=180&c=7&r=0&o=5&pid=1.7",
     ingredients: [
@@ -77,6 +79,7 @@ export const resipes:Recipe[] = [
     country: "India"
   },
   {
+    id:"3",
     name: "Chocolate Chip Cookies",
     image: "https://www.spendwithpennies.com/wp-content/uploads/2022/04/Chocolate-Chip-Cookies-SpendWithPennies-2.jpg",
     ingredients: [
@@ -114,6 +117,7 @@ export const resipes:Recipe[] = [
     country: "United States"
   },
   {
+    id:"4",
     name: "Beef Tacos",
     image: "https://www.jocooks.com/wp-content/uploads/2020/08/ground-beef-tacos-1-12.jpg",
     ingredients: [
