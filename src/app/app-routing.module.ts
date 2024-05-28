@@ -13,7 +13,7 @@ const routes: Routes = [
     {path: 'info', component:RecipeInfoComponent},
     {path: 'ingredients', component:RecipeIngredientsComponent},
   ]},
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent } //should be the last component 
 ];
 
 @NgModule({
