@@ -10,6 +10,11 @@ import { RecipeItemComponent } from './recipes/recipe-item/recipe-item.component
 import { HeroComponent } from './layout/hero/hero.component';
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
+import { RecipeInfoComponent } from './recipes/recipe-details/recipe-info/recipe-info.component';
+import { RecipeIngredientsComponent } from './recipes/recipe-details/recipe-ingredients/recipe-ingredients.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RecipeFormComponent } from './recipe-form/recipe-form.component';
+import { ShortenTextPipe } from './pipes/shorten-text.pipe';
 
 @NgModule({
   declarations: [
@@ -20,11 +25,17 @@ import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.co
     RecipeItemComponent,
     HeroComponent,
     RecipeDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RecipeInfoComponent,
+    RecipeIngredientsComponent,
+    RecipeFormComponent,
+    ShortenTextPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

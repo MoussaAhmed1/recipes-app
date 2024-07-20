@@ -1,0 +1,49 @@
+<div class="container mx-auto">
+  <form
+    class="space-y-6"
+    (ngSubmit)="onAddRecipe(recipeForm)"
+    #recipeForm="ngForm"
+  >
+  <div>
+    <label for="image" class="block text-sm font-medium leading-6 text-gray-900"
+    >{{"Image" | uppercase}}</label
+    >
+    <div class="mt-2">
+        <input
+          id="image"
+          name="image"
+          type="text"
+          ngModel
+          autocomplete="image"
+          required
+          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      
+      <div>
+        <label for="name" class="block text-sm font-medium leading-6 text-gray-900"
+        >Name</label
+        >
+        <div class="mt-2">
+          <input
+          id="name"
+          name="name"
+          type="text"
+          ngModel
+          autocomplete="name"
+          required
+          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      
+      <button
+      class="rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      type="submit"
+      [disabled]="!recipeForm.valid"
+    >Add</button>
+      <h1 class="text-red">{{dateNow | date:'short'}}</h1>
+      <h1 class="text-red-400">{{'what if we visit https:www.islamic-website.com' | shortenText:15}}</h1>
+  </form>
+</div>

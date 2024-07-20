@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  isAuthenticated = !!(localStorage.getItem('isAuthenticated')) || false;
+  onLogin(){
+    localStorage.setItem('isAuthenticated','true');
+    this.isAuthenticated = true;
+    console.log("logged in");
+  }
+  onLogout(){
+    localStorage.removeItem('isAuthenticated');
+    this.isAuthenticated = false;
+    console.log("logged out");
+  }
 }

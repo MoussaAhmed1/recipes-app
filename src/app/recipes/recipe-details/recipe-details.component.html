@@ -1,1 +1,7 @@
 <p>recipe-details works!</p>
+<button class="btn-primary p-3" (click)="onchangeTab('info')">info</button>
+<button class="btn-primary p-3" (click)="onchangeTab('ingredients')">Ingredients</button>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-details',
@@ -9,9 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 export class RecipeDetailsComponent {
   // how to read query parameters from the url:-
   
-  constructor(private activatedRoute: ActivatedRoute){}
+  constructor(private activatedRoute: ActivatedRoute,private router:Router){}
 
   ngOnInit(): void {
+
+    this.activatedRoute.params.subscribe(params => {
+      console.log(params);
+    })
 
     this.activatedRoute.queryParams.subscribe(params => {
       console.log(params);
@@ -21,5 +25,8 @@ export class RecipeDetailsComponent {
       console.log(frameElement);
     })
     
+  }
+  onchangeTab(tab:string){
+    this.router.navigate([tab],{relativeTo:this.activatedRoute,queryParamsHandling:"preserve"})
   }
 }
