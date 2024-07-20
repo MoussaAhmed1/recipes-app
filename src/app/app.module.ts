@@ -12,6 +12,9 @@ import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 import { RecipeInfoComponent } from './recipes/recipe-details/recipe-info/recipe-info.component';
 import { RecipeIngredientsComponent } from './recipes/recipe-details/recipe-ingredients/recipe-ingredients.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RecipeFormComponent } from './recipe-form/recipe-form.component';
+import { ShortenTextPipe } from './pipes/shorten-text.pipe';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,15 @@ import { RecipeIngredientsComponent } from './recipes/recipe-details/recipe-ingr
     RecipeDetailsComponent,
     PageNotFoundComponent,
     RecipeInfoComponent,
-    RecipeIngredientsComponent
+    RecipeIngredientsComponent,
+    RecipeFormComponent,
+    ShortenTextPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

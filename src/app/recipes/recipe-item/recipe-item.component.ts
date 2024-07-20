@@ -13,7 +13,7 @@ export class RecipeItemComponent {
   constructor(private router: Router) {}
 
   viewDetails(id: string | undefined) {
-    this.router.navigate(['recipes', id], {
+    this.router.navigate(['recipes', id,'info'], {
       queryParams: { chef: this.recipe?.chef?.name },
       fragment: 'recipe-detail'
     });

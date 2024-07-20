@@ -13,6 +13,10 @@ export class RecipeDetailsComponent {
 
   ngOnInit(): void {
 
+    this.activatedRoute.params.subscribe(params => {
+      console.log(params);
+    })
+
     this.activatedRoute.queryParams.subscribe(params => {
       console.log(params);
     })
@@ -23,6 +27,6 @@ export class RecipeDetailsComponent {
     
   }
   onchangeTab(tab:string){
-    this.router.navigate([tab],{relativeTo:this.activatedRoute})
+    this.router.navigate([tab],{relativeTo:this.activatedRoute,queryParamsHandling:"preserve"})
   }
 }

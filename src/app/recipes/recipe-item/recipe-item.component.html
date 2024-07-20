@@ -9,7 +9,7 @@
   <div class="px-6 pt-4">
     <div class="font-bold text-xl">
       <a 
-      [routerLink]="['recipes', recipe?.name]"
+      [routerLink]="['recipes', recipe?.name,'info']"
       [queryParams]="{category:recipe?.category, chef:recipe?.chef?.name}"
       fragment="loading"
       ariaCurrentWhenActive="page">
